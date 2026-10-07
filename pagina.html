@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine Club - Comunidade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo">Cine Club</h2>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li class="tem-submenu">
+          <a href="sobre.html" id="btn-sobre">Sobre</a>
+          <ul class="submenu" id="menu-vertical-sobre">
+            <li><a href="sobre.html#empresa" id="link-empresa">Empresa</a></li>
+            <li><a href="sobre.html#clientes" id="link-clientes">Clientes</a></li>
+          </ul>
+        </li>
+        <li class="tem-submenu">
+          <a href="contato.html" id="btn-contato">Contato</a>
+          <ul class="submenu" id="menu-vertical-contato">
+            <li><a href="contato.html#telefones" id="link-telefone">Telefones</a></li>
+            <li><a href="mailto:contato@cineclub.com.br?subject=Contato%20pelo%20site%20Cine%20Club" id="link-email">Email</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="perfil-usuario">
+      <img id="foto-usuario" src="perfil.jpg" alt="Foto de perfil">
+      <h1>Bem-vindo(a), <span id="nome-usuario">cinéfilo</span>!</h1>
+      <p>Poste sua avaliação, mostre uma cena do filme e comente nas opiniões da galera.</p>
+      <a href="login.html" class="botao" id="btn-sair">Sair</a>
+    </section>
+
+    <section id="nova-avaliacao">
+      <h2>Nova avaliação</h2>
+      <form id="form-avaliacao">
+        <label for="titulo-filme">Nome do filme</label>
+        <input type="text" id="titulo-filme" required>
+
+        <label for="foto-filme">Foto do filme</label>
+        <input type="file" id="foto-filme" accept="image/*">
+
+        <label for="nota-filme">Nota</label>
+        <select id="nota-filme" required>
+          <option value="">Escolha...</option>
+          <option value="5">★★★★★ (5)</option>
+          <option value="4">★★★★☆ (4)</option>
+          <option value="3">★★★☆☆ (3)</option>
+          <option value="2">★★☆☆☆ (2)</option>
+          <option value="1">★☆☆☆☆ (1)</option>
+        </select>
+
+        <label for="texto-avaliacao">O que você achou?</label>
+        <textarea id="texto-avaliacao" rows="4" required></textarea>
+
+        <button type="submit" class="botao" id="btn-publicar">Publicar</button>
+      </form>
+    </section>
+
+    <section id="feed">
+      <h2>Avaliações da comunidade</h2>
+
+      <article class="post">
+        <div class="post-topo">
+          <img class="foto-autor" src="perfil.jpg" alt="Foto do autor">
+          <strong class="nome-autor">Maria</strong>
+        </div>
+        <h3 class="titulo-post">Interestelar</h3>
+        <img class="foto-post" src="devoradores de estrelas.jpg" alt="Foto do filme Devoradores de Estrelas">
+        <p class="nota-post">★★★★★</p>
+        <p class="texto-post">Emocionante do começo ao fim, a trilha sonora é incrível.</p>
+
+        <div class="comentarios">
+          <h4>Comentários</h4>
+          <ul class="lista-comentarios">
+            <li><strong>João:</strong> Concordo, chorei no final!</li>
+            <li><strong>Ana:</strong> Preciso rever esse filme.</li>
+          </ul>
+          <form class="form-comentario">
+            <input type="text" class="campo-comentario" placeholder="Escreva um comentário..." required>
+            <button type="submit" class="botao">Comentar</button>
+          </form>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-topo">
+          <img class="foto-autor" src="perfil.jpg" alt="Foto do autor">
+          <strong class="nome-autor">Carlos</strong>
+        </div>
+        <h3 class="titulo-post">O Poderoso Chefão</h3>
+        <img class="foto-post" src="o poderoso chefao.jpg" alt="Foto do filme O Poderoso Chefão">
+        <p class="nota-post">★★★★☆</p>
+        <p class="texto-post">Um clássico, só achei um pouco longo.</p>
+
+        <div class="comentarios">
+          <h4>Comentários</h4>
+          <ul class="lista-comentarios">
+            <li><strong>Bia:</strong> Longo, mas vale cada minuto.</li>
+          </ul>
+          <form class="form-comentario">
+            <input type="text" class="campo-comentario" placeholder="Escreva um comentário..." required>
+            <button type="submit" class="botao">Comentar</button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p id="data-atual"></p>
+    <p>Todos os direitos reservados. Desenvolvido por: Isabella e Arthur</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

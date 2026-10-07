@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine Club - Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo">Cine Club</h2>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li class="tem-submenu">
+          <a href="sobre.html" id="btn-sobre">Sobre</a>
+          <ul class="submenu" id="menu-vertical-sobre">
+            <li><a href="sobre.html#empresa" id="link-empresa">Empresa</a></li>
+            <li><a href="sobre.html#clientes" id="link-clientes">Clientes</a></li>
+          </ul>
+        </li>
+        <li class="tem-submenu">
+          <a href="contato.html" id="btn-contato">Contato</a>
+          <ul class="submenu" id="menu-vertical-contato">
+            <li><a href="contato.html#telefones" id="link-telefone">Telefones</a></li>
+            <li><a href="mailto:contato@cineclub.com.br?subject=Contato%20pelo%20site%20Cine%20Club" id="link-email">Email</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Crie sua conta</h1>
+    <p>Preencha os dados abaixo para participar do Cine Club.</p>
+
+    <form id="form-cadastro">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="000.000.000-00" required>
+
+      <label for="endereco">Endereço</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+      <label for="email-cadastro">Email</label>
+      <input type="email" id="email-cadastro" name="email" required>
+
+      <label for="senha-cadastro">Senha</label>
+      <input type="password" id="senha-cadastro" name="senha" minlength="6" required>
+
+      <label for="confirmar-senha">Confirmar senha</label>
+      <input type="password" id="confirmar-senha" name="confirmar-senha" minlength="6" required>
+
+      <label for="foto-perfil">Foto de perfil</label>
+      <input type="file" id="foto-perfil" name="foto-perfil" accept="image/*">
+
+      <button type="submit" class="botao" id="btn-cadastrar">Cadastrar</button>
+      <p id="msg-cadastro" class="mensagem"></p>
+    </form>
+
+    <a href="index.html" class="botao" id="btn-voltar">Voltar</a>
+
+    <p>Já tem conta? <a href="login.html">Faça login</a></p>
+  </main>
+
+  <footer>
+    <p id="data-atual"></p>
+    <p>Todos os direitos reservados. Desenvolvido por: Isabella e Arthur</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
